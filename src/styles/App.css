@@ -1,0 +1,10 @@
+.App {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #a0b6ef;
+  font-size: x-large;
+  font-weight: bold;
+}
