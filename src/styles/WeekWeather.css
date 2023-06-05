@@ -1,0 +1,11 @@
+.allWeatherContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titleWContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

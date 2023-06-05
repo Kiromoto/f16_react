@@ -1,5 +1,6 @@
 import React, {Fragment} from "react";
 import axios from "axios";
+import Card from "./Card";
 
 
 const apikey = "f548d72749c6aad919dcb1751ae76631";
@@ -37,7 +38,9 @@ const City = [
     },
 ];
 
-let weatherUrlFree = "http://api.openweathermap.org/data/2.5/forecast?lat=" + `${City[0].lat}` + "&lon=" + `${City[0].lon}` + "&units=metric&&lang=ru&appid=" + `${apikey}`;
+let selected = City[4];
+
+let weatherUrlFree = "http://api.openweathermap.org/data/2.5/forecast?lat=" + `${selected.lat}` + "&lon=" + `${selected.lon}` + "&units=metric&&lang=ru&appid=" + `${apikey}`;
 
 
 class WeekWeather extends React.Component {
@@ -50,14 +53,21 @@ class WeekWeather extends React.Component {
     componentDidMount = () => {
         axios.get(weatherUrlFree).then(result => {
                     this.state.weatherNow = result.data.list;
+                    const fiveDaysData: any = result.data.list.filter((el:any) => el.dt_txt.includes("12:00:00"));
+                    this.setState({days: fiveDaysData});
                 });
     }
 
+    makeDayCards = () => {
+        return this.state.days.map((day:any, index:number) => <Card day={day} key={index}/>)
+    };
+
     render() {
         return (
-            <Fragment>
-
-            </Fragment>
+            <div className="allWeatherContainer">
+                <div className="titleWContainer">Погода для города {selected.label}</div>
+                {this.makeDayCards()}
+            </div>
         );
     };
 

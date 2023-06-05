@@ -6,13 +6,9 @@ function Main() {
 
     return (
         <Fragment>
-            <div>
-                <button id="find-me">Show my location</button><br/>
-                <p id="status"></p>
-                <a id="map-link" target="_blank"></a>
-
+            <div className="container">
+                <WeekWeather/>
             </div>
-            <WeekWeather/>
         </Fragment>
     )
 
