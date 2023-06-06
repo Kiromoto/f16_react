@@ -13,7 +13,7 @@ function Card(props:any) {
 
     return (
         <div className="col-auto">
-            <div className="card bg-light">
+            <div className="card">
                 <h3 className="card-title">{weekdayName}</h3>
                 <i className={imgURL}></i>
                 <h2>{Math.round(props.day.main.temp)} °C</h2>

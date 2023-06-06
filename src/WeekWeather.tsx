@@ -1,6 +1,7 @@
 import React, {Fragment} from "react";
 import axios from "axios";
 import Card from "./Card";
+import './styles/WeekWeather.css'
 
 
 const apikey = "f548d72749c6aad919dcb1751ae76631";
@@ -64,9 +65,9 @@ class WeekWeather extends React.Component {
 
     render() {
         return (
-            <div className="allWeatherContainer">
-                <div className="titleWContainer">Погода для города {selected.label}</div>
-                {this.makeDayCards()}
+            <div>
+                <div className="titleContainer">Погода для города {selected.label}</div>
+                <div className="allWeatherContainer">  {this.makeDayCards()} </div>
             </div>
         );
     };
