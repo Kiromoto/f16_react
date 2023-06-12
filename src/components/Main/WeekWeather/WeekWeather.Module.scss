@@ -1,11 +1,17 @@
 .allWeatherContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    border-color: #0b3ca6;
+
 }
 
-.titleWContainer {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.titleContainer {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: yellow;
+
 }
