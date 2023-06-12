@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
-import './styles/App.css';
-import Main from './Main';
-import Header from  './Header';
+import './App.Module.scss';
+import Main from './Main/Main';
+import Header from './Header/Header';
 
 
 function App() {

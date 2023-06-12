@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
-import './styles/Card.css';
-import './styles/owfont-master/css/owfont-regular.css'
+import './Card.Module.scss';
+import '../../../../styles/owfont-master/css/owfont-regular.css'
 
 
 

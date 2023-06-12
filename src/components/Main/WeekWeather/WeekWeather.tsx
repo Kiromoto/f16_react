@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import axios from "axios";
-import Card from "./Card";
+import Card from "./Card/Card";
 
 
 const apikey = "f548d72749c6aad919dcb1751ae76631";
@@ -38,7 +38,7 @@ const City = [
     },
 ];
 
-let selected = City[4];
+let selected = City[0];
 
 let weatherUrlFree = "http://api.openweathermap.org/data/2.5/forecast?lat=" + `${selected.lat}` + "&lon=" + `${selected.lon}` + "&units=metric&&lang=ru&appid=" + `${apikey}`;
 

@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
-import WeekWeather from './WeekWeather';
-import './styles/Main.css'
+import WeekWeather from './WeekWeather/WeekWeather';
+import './Main.Module.scss'
 
 function Main() {
 

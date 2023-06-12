@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import './styles/Header.css'
+import './Header.Module.scss'
 
 function Header() {
     return (
