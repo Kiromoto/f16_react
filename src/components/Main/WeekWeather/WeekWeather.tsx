@@ -1,8 +1,7 @@
 import React, {Fragment} from "react";
 import axios from "axios";
-import Card from "./Card";
-import './styles/WeekWeather.css'
-
+import Card from "./Card/Card";
+import './WeekWeather.Module.scss';
 
 const apikey = "f548d72749c6aad919dcb1751ae76631";
 
@@ -39,7 +38,7 @@ const City = [
     },
 ];
 
-let selected = City[4];
+let selected = City[0];
 
 let weatherUrlFree = "http://api.openweathermap.org/data/2.5/forecast?lat=" + `${selected.lat}` + "&lon=" + `${selected.lon}` + "&units=metric&&lang=ru&appid=" + `${apikey}`;
 
@@ -53,22 +52,22 @@ class WeekWeather extends React.Component {
 
     componentDidMount = () => {
         axios.get(weatherUrlFree).then(result => {
-                    this.state.weatherNow = result.data.list;
-                    const fiveDaysData: any = result.data.list.filter((el:any) => el.dt_txt.includes("12:00:00"));
-                    this.setState({days: fiveDaysData});
-                });
+            this.state.weatherNow = result.data.list;
+            const fiveDaysData: any = result.data.list.filter((el: any) => el.dt_txt.includes("12:00:00"));
+            this.setState({days: fiveDaysData});
+        });
     }
 
     makeDayCards = () => {
-        return this.state.days.map((day:any, index:number) => <Card day={day} key={index}/>)
+        return this.state.days.map((day: any, index: number) => <Card day={day} key={index}/>)
     };
 
     render() {
         return (
-            <div>
-                <div className="titleContainer">Погода для города {selected.label}</div>
-                <div className="allWeatherContainer">  {this.makeDayCards()} </div>
-            </div>
+            <>
+                <div className="titleContainer">Прогноз погоды для города {selected.label}</div>
+                <div className="allWeatherContainer"> {this.makeDayCards()} </div>
+            </>
         );
     };
 

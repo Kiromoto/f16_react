@@ -1,0 +1,25 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/index';
+
+.allWeatherContainer {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, 350px);
+    border-color: #0b3ca6;
+
+}
+
+.titleContainer {
+    padding: 15px 0px;
+    margin-bottom: 25px;
+    font-size: 28px;
+    width: 100%;
+    background-color: #bbbbbb;
+    border: none;
+    text-align: center;
+
+
+}
