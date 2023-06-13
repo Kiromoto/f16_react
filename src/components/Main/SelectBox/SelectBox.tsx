@@ -40,18 +40,20 @@ function SelectBox() {
 
     const changeCityValue = (selected: any) => {
         setSelectedCity(selected);
-        console.log(selectedCity);
+        console.log(selected);
     };
 
 
     return (
         <div className="divStyle">
             <Select
-                onChange={changeCityValue}
                 value={selectedCity}
+                onChange={changeCityValue}
                 options={City}
+                placeholder={'Выберите город...'}
+
             />
-            
+
         </div>
 
     );
