@@ -1,5 +1,8 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/index';
+
 .HeaderDiv {
-    margin: 0;
+    margin-bottom: 25px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -7,8 +10,8 @@
 
     width: 100%;
     height: 100px;
-    background-color: #c0d5e8;
-    color: #22227c;
+    background-color: $background-color;
+    color: $text-color;
     font-size: 32px;
 
 }
