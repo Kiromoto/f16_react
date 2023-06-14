@@ -46,14 +46,13 @@ function SelectBox() {
 
     return (
         <div className="divStyle">
-            <Select
+            <Select className="select"
                 value={selectedCity}
                 onChange={changeCityValue}
                 options={City}
                 placeholder={'Выберите город...'}
 
             />
-
         </div>
 
     );

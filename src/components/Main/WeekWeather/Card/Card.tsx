@@ -5,13 +5,13 @@ import './Card.Module.scss';
 
 function Card(props: any) {
     const ms = props.day.dt * 1000;
-    // const weekdayName = new Date(ms).toLocaleString('ru', {weekday: 'long'});
-    const weekdayName = new Date(ms).toLocaleString('ru');
-
+    const weekdayName = new Date(ms).toLocaleString('ru', {weekday: 'long'});
+    const dayDate = new Date(ms).toLocaleString('ru', {day: 'numeric', month: 'long', year: 'numeric'});
     const imgURL = "owf owf-" + props.day.weather[0].id + " owf-5x icon-style"
 
     return (
         <div className="card">
+            <h3 className="card-title">{dayDate}</h3>
             <h3 className="card-title">{weekdayName}</h3>
             <i className={imgURL}></i>
             <h2>{Math.round(props.day.main.temp)} °C</h2>

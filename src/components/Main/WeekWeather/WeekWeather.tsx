@@ -65,7 +65,7 @@ class WeekWeather extends React.Component {
     render() {
         return (
             <>
-                <div className="titleContainer">Прогноз погоды для города {selected.label}</div>
+                <div className="titleContainer">Выбран город {selected.label}. Долгота: {selected.lon.toFixed(4)}, Широта: {selected.lat.toFixed(4)}.</div>
                 <div className="allWeatherContainer"> {this.makeDayCards()} </div>
             </>
         );
