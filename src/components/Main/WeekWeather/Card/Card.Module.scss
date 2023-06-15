@@ -26,6 +26,16 @@
     justify-content: center;
     align-items: center;
 
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+
+.card-title {
+    margin-bottom: 8px;
+    &:last-of-type {
+        margin-bottom: 30px;
+    }
 }
 
 .icon-style {

@@ -1,7 +1,10 @@
 import React, {useState} from "react";
 import "./SelectBox.Module.scss";
-import Select from 'react-select'
+import Select from 'react-select';
+import axios from "axios";
 
+
+const apikey:string = "f548d72749c6aad919dcb1751ae76631";
 const City = [
     {
         value: "Minsk",
@@ -35,12 +38,17 @@ const City = [
     },
 ];
 
+let fiveDaysData:any = '';
+
 function SelectBox() {
     const [selectedCity, setSelectedCity] = useState(null);
-
-    const changeCityValue = (selected: any) => {
+   const changeCityValue = (selected: any) => {
         setSelectedCity(selected);
-        console.log(selected);
+        let weatherUrlFree = "http://api.openweathermap.org/data/2.5/forecast?lat=" + `${selected.lat}` + "&lon=" + `${selected.lon}` + "&units=metric&&lang=ru&appid=" + `${apikey}`;
+        axios.get(weatherUrlFree).then(result => {
+            // const fiveDaysData: any = result.data.list.filter((el: any) => el.dt_txt.includes("12:00:00"));
+            fiveDaysData = result.data.list.filter((el: any) => el.dt_txt.includes("12:00:00"));
+        });
     };
 
 
@@ -54,7 +62,6 @@ function SelectBox() {
 
             />
         </div>
-
     );
 
 }
