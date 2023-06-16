@@ -1,5 +1,6 @@
-import React, {Fragment} from "react";
+import React, {useContext} from "react";
 import './Card.Module.scss';
+import {Context} from "./../../../App";
 
 
 
@@ -8,6 +9,8 @@ function Card(props: any) {
     const weekdayName = new Date(ms).toLocaleString('ru', {weekday: 'long'});
     const dayDate = new Date(ms).toLocaleString('ru', {day: 'numeric', month: 'long', year: 'numeric'});
     const imgURL = "owf owf-" + props.day.weather[0].id + " owf-5x icon-style"
+
+    const contextValue:any = useContext(Context);
 
     return (
         <div className="card">
@@ -18,6 +21,7 @@ function Card(props: any) {
             <div className="card-body">
                 <p className="card-text">{props.day.weather[0].description}</p>
             </div>
+            <div> contextValue: {contextValue.test} </div>
         </div>
     )
 }
