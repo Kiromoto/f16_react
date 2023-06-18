@@ -21,7 +21,7 @@ function Card(props: any) {
             <div className="card-body">
                 <p className="card-text">{props.day.weather[0].description}</p>
             </div>
-            <div> contextValue: {contextValue.test} </div>
+            <div> contextValue: {contextValue.city.label} </div>
         </div>
     )
 }
