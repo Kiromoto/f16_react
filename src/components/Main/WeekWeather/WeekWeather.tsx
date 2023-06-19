@@ -15,8 +15,8 @@ function WeekWeather() {
 
     return (
         <>
-            <div className="titleContainer">Выбран город {contextValue.city.label}. Долгота: {contextValue.city.lon},
-                Широта: {contextValue.city.lat}.
+            <div className="titleContainer">Выбран город {contextValue.city.label}. Долгота: {contextValue.city.lon.toFixed(4)},
+                Широта: {contextValue.city.lat.toFixed(4)}.
             </div>
             <div className="allWeatherContainer"> {makeDayCards()} </div>
         </>
