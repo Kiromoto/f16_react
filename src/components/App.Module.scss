@@ -9,8 +9,7 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 480px) {
-  /* Smartphones (вертикальная и горизонтальная ориентация) */
-  font-size: x-small;
 
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  width: 600px;
 }
