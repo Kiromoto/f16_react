@@ -89,39 +89,41 @@ i:hover {
 }
 
 
-@media only screen and (max-width: 1200px) {
-
-}
-
 @media only screen and (max-width: 992px) {
   .card {
-    width: 20rem;
-    padding: 1rem 0;
-    margin-bottom: 0rem;
-    margin-top: 0rem;
+    h2 {
+      margin-bottom: 10px;
+    }
 
     h2, h3, div > p {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 
+  .card-title {
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .card {
-        width: 19rem;
-        padding: 1rem 0;
-        margin-bottom: 1rem;
-        margin-top: 0.5rem;
+  .card {
+    width: 19rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 
-        h2 {
-            margin-bottom: 10px;
-        }
-
-        h2, h3, div > p {
-            font-size: 20px;
-        }
+    h2 {
+      margin-bottom: 10px;
     }
+
+    h2, h3, div > p {
+      font-size: 20px;
+    }
+  }
 
   .card-title {
     margin-bottom: 8px;
@@ -133,10 +135,10 @@ i:hover {
 }
 
 @media only screen and (max-width: 480px) {
-
-}
-
-@media only screen and (max-width: 320px) {
+  .card {
+    width: 18rem;
+    padding: 0.5rem 0;
+  }
 
 }
 

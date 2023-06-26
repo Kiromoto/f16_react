@@ -30,4 +30,11 @@ export const City = [
         lat: 41.0091982,
         lon: 28.9662187,
     },
+    {
+        value: "Ushuaia",
+        label: "Ушуя",
+        lat: -54.8069332,
+        lon: -68.3073246,
+    },
 ];
+
