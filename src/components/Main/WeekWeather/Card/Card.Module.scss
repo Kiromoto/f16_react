@@ -115,23 +115,8 @@ i:hover {
     padding: 1rem 0;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
-
-    h2 {
-      margin-bottom: 10px;
-    }
-
-    h2, h3, div > p {
-      font-size: 20px;
-    }
   }
 
-  .card-title {
-    margin-bottom: 8px;
-
-    &:last-of-type {
-      margin-bottom: 20px;
-    }
-  }
 }
 
 @media only screen and (max-width: 480px) {

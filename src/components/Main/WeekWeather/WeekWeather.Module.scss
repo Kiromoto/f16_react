@@ -39,18 +39,12 @@
   }
 
   .titleContainer {
-    margin-bottom: 10px;
     font-size: 18px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .allWeatherContainer {
-    grid-template-columns: repeat(auto-fit, 360px);
-  }
-
   .titleContainer {
-    margin-bottom: 10px;
     font-size: 15px;
   }
 }
